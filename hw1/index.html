@@ -1,0 +1,54 @@
+<button class="button-74" onClick = "show()">執行</button>
+<div id = "text"></div>
+
+<!–--------- JS TODO: 請修改為更改背景顏色 –--------->
+<script>
+    let msg = ["你今天也好棒喔(灬ºωº灬)", "快要放假了好開心(✿ﾟ▽ﾟ)ノ", "欸欸 要一起來念書嗎(๑•̀ㅂ•́)و✧"];
+	let color = ["#A3D1D1","#C7C7E2","#D2A2CC"];
+    let i = 0;
+    
+    function show()
+    {
+		document.getElementById("text").innerHTML = msg[i%3];
+		document.body.style.backgroundColor = color[i%3];
+    	++i;
+    }
+</script>
+
+<!–--------- CSS TODO: 請套用一種想要的按鈕(button)樣式 –--------->
+<style>
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+</style>
